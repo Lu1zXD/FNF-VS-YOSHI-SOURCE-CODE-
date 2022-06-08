@@ -235,7 +235,9 @@ class StoryMenuState extends MusicBeatState
 				selectWeek();
 			}
 		}
-
+#if android
+addVirtualPad(FULL, A_B);
+#end
 		if (controls.BACK && !movedBack && !selectedWeek)
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
